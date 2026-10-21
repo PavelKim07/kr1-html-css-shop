@@ -1,154 +1,249 @@
-/* Универсальное правило для всех элементов. */
+/* ===================================
+   1. Переменные проекта
+   =================================== */
+:root {
+    /* Основные цвета проекта */
+    --color-bg: #ffffff;
+    --color-text: #222222;
+    --color-muted: #666666;
+    --color-primary: #0057b8;
+    --color-primary-dark: #003f86;
+    --color-border: #dddddd;
+    --color-surface: #f7f7f7;
+    --color-surface-accent: #eef5ff;
+    --color-danger: #b00020;
+    --color-success: #168a2f;
+    --color-success-bg: #eefaf0;
+    --color-white: #ffffff;
+
+    /* Отступы */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+
+    /* Скругления */
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    /* Размеры */
+    --container-width: 1100px;
+}
+
+/* ===================================
+   2. Базовые стили
+   =================================== */
 * {
     box-sizing: border-box;
 }
 
-/* Убираем стандартный отступ браузера у body. */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.5;
-    color: #222222;
-    background-color: #ffffff;
+    color: var(--color-text);
+    background-color: var(--color-bg);
 }
 
-/* Внутренние отступы для основных областей страницы. */
 header,
 main,
 footer {
-    padding: 20px;
+    padding: var(--space-lg);
 }
 
-/* Светло-серый фон шапки. */
-header {
-    background-color: #f2f2f2;
-}
-
-/* Такой же фон у подвала. */
+header,
 footer {
-    background-color: #f2f2f2;
+    background-color: var(--color-surface);
 }
 
-/* Ограничиваем ширину содержимого шапки. */
+/* ===================================
+   3. Общие элементы интерфейса
+   =================================== */
+a {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+.button {
+    display: inline-block;
+    padding: var(--space-sm) var(--space-md);
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    text-decoration: none;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ===================================
+   4. Компоненты страницы
+   =================================== */
 .site-header {
-    max-width: 1100px;
+    max-width: var(--container-width);
     margin: 0 auto;
 }
 
-/* Текстовый логотип. */
 .site-logo {
     font-weight: bold;
     text-decoration: none;
-    color: #222222;
+    color: var(--color-text);
 }
 
-/* Убираем стандартные отступы и маркеры списка навигации. */
 .site-nav__list {
     padding: 0;
-    margin: 16px 0 0;
+    margin: var(--space-md) 0 0;
     list-style: none;
 }
 
-/* Расстояние между пунктами меню. */
 .site-nav__list li {
-    margin-bottom: 8px;
+    margin-bottom: var(--space-sm);
 }
 
-/* Ссылки меню. */
 .site-nav__list a {
-    color: #0057b8;
+    color: var(--color-primary);
     text-decoration: none;
 }
 
-/* Подчёркивание при наведении. */
 .site-nav__list a:hover {
     text-decoration: underline;
 }
 
-/* Hero-блок — первый крупный блок страницы. */
 .hero {
-    max-width: 1100px;
-    margin: 0 auto 32px;
-    padding: 32px 20px;
-    background-color: #eef5ff;
-    border-radius: 12px;
+    max-width: var(--container-width);
+    margin: 0 auto var(--space-xl);
+    padding: var(--space-xl) var(--space-lg);
+    background-color: var(--color-surface-accent);
+    border-radius: var(--radius-lg);
 }
 
-/* Общий класс для разделов страницы. */
 .section {
-    max-width: 1100px;
-    margin: 0 auto 32px;
+    max-width: var(--container-width);
+    margin: 0 auto var(--space-xl);
 }
 
-/* Убираем лишний верхний отступ у заголовков разделов. */
 .section h2 {
     margin-top: 0;
 }
 
-/* Карточка товара. */
 .product-card {
-    margin-bottom: 16px;
-    padding: 16px;
-    border: 1px solid #dddddd;
-    border-radius: 8px;
-    background-color: #ffffff;
+    margin-bottom: var(--space-md);
+    padding: var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg);
 }
 
-/* Убираем лишний верхний отступ у заголовка карточки. */
+.product-card:hover {
+    border-color: var(--color-primary);
+}
+
 .product-card h3 {
     margin-top: 0;
 }
 
-/* Кнопка. */
-.button {
-    display: inline-block;
-    padding: 10px 16px;
-    color: #ffffff;
-    background-color: #0057b8;
-    text-decoration: none;
-    border-radius: 6px;
-}
-
-.button:hover {
-    background-color: #003f86;
-}
-
-/* Дополнительный информационный блок. */
 .aside-info {
-    max-width: 1100px;
-    margin: 0 auto 32px;
-    padding: 16px;
-    border-left: 4px solid #0057b8;
-    background-color: #f7f7f7;
+    max-width: var(--container-width);
+    margin: 0 auto var(--space-xl);
+    padding: var(--space-md);
+    border-left: 4px solid var(--color-primary);
+    background-color: var(--color-surface);
 }
 
-< !DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Учебный интернет-магазин</title><link rel="stylesheet" href="css/style.css"><script src="js/main.js" defer></script></head><body><header><div class="site-header"><a class="site-logo" href="index.html">ShopProject</a><nav class="site-nav" aria-label="Основная навигация"><ul class="site-nav__list"><li><a href="index.html">Главная</a></li><li><a href="#popular">Популярные товары</a></li><li><a href="#advantages">Преимущества</a></li><li><a href="#contacts">Контакты</a></li></ul></nav></div></header><main><section class="hero"><h1>Учебный интернет-магазин</h1><p>Это стартовая страница учебного frontend-проекта. В дальнейшем на её основе будет разработан многостраничный сайт интернет-магазина или каталога услуг. </p><a class="button" href="#popular">Перейти к товарам</a></section><section class="section" id="advantages"><h2>Преимущества проекта</h2><ul class="advantages-list"><li>понятная HTML-структура;
-</li><li>семантические блоки страницы;
-</li><li>подключение внешнего CSS-файла;
-</li><li>подготовка к разработке многостраничного сайта.</li></ul></section><section class="section" id="popular"><h2>Популярные товары</h2><article class="product-card"><h3>Товар 1</h3><p>Краткое описание учебного товара.</p><p>Цена: 1000 руб.</p><button class="button product-card__button" type="button" data-product="Товар 1">Заказать </button></article><article class="product-card"><h3>Товар 2</h3><p>Краткое описание учебного товара.</p><p>Цена: 1500 руб.</p><button class="button product-card__button" type="button" data-product="Товар 2">Заказать </button></article><article class="product-card"><h3>Товар 3</h3><p>Краткое описание учебного товара.</p><p>Цена: 2000 руб.</p><button class="button product-card__button" type="button" data-product="Товар 3">Заказать </button></article></section><aside class="aside-info"><h2>Информация для студентов</h2><p>На следующих практических занятиях этот проект будет расширяться: появятся формы,
-модальное окно,
-дополнительные страницы,
-Flex/Grid,
-БЭМ-структура и адаптивная версия сайта. </p></aside></main><footer id="contacts"><p>&copy;
-2026 Учебный проект. Все права защищены.</p><p>Дисциплина: фронтенд и бэкенд разработка</p></footer>< !-- Модальное окно с формой заявки --><dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title"><h2 id="order-dialog-title">Оформление заявки</h2><form class="order-form" id="order-form" action="#" method="post" novalidate><input id="selected-product" name="selected-product" type="hidden"><div class="form-field"><label for="order-name">Имя</label><input id="order-name"
-name="name"
-type="text"
-placeholder="Введите ваше имя"
-minlength="2"
-autocomplete="given-name"
-required></div><div class="form-field"><label for="order-email">E-mail</label><input id="order-email"
-name="email"
-type="email"
-placeholder="example@mail.ru"
-autocomplete="email"
-required></div><div class="form-field"><label for="order-phone">Телефон</label><input id="order-phone"
-name="phone"
-type="tel"
-inputmode="tel"
-placeholder="+7 (900) 000-00-00"
-pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
-required><small>Формат:+7 (900) 000-00-00</small></div><div class="form-field"><label for="order-date">Дата связи</label><input id="order-date" name="date" type="date"></div><div class="form-field"><label for="order-topic">Тема заявки</label><select id="order-topic" name="topic" required><option value="">Выберите тему</option><option value="product">Заказ товара</option><option value="consultation">Консультация</option><option value="delivery">Доставка</option></select></div><div class="form-field"><label for="order-comment">Комментарий</label><textarea id="order-comment"
-name="comment"
-rows="4"
-placeholder="Укажите дополнительную информацию"
-></textarea></div><div class="form-field form-field--checkbox"><label><input id="order-agreement" name="agreement" type="checkbox" required>Я согласен на обработку данных </label></div><div class="form-actions"><button type="button" id="close-order-dialog">Закрыть</button><button type="submit">Отправить заявку</button></div></form></dialog>< !-- Сообщение об успешной отправке --><p class="success-message" id="success-message" hidden>Форма успешно отправлена ! </p></body></html>
+/* ===================================
+   5. Форма и модальное окно
+   =================================== */
+.order-dialog {
+    width: min(100% - 32px, 560px);
+    padding: var(--space-lg);
+    border: none;
+    border-radius: var(--radius-lg);
+}
+
+.order-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.form-field {
+    margin-bottom: var(--space-md);
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font: inherit;
+}
+
+.form-field input[type="checkbox"] {
+    width: auto;
+}
+
+.form-field small {
+    display: block;
+    margin-top: var(--space-xs);
+    color: var(--color-muted);
+}
+
+.form-field input:hover,
+.form-field select:hover,
+.form-field textarea:hover {
+    border-color: var(--color-primary);
+}
+
+.form-field input:focus-visible,
+.form-field select:focus-visible,
+.form-field textarea:focus-visible,
+.form-actions button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+[aria-invalid="true"] {
+    border-color: var(--color-danger);
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.success-message {
+    max-width: var(--container-width);
+    margin: var(--space-lg) auto;
+    padding: var(--space-md);
+    border-left: 4px solid var(--color-success);
+    background-color: var(--color-success-bg);
+}
