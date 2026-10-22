@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Каталог – Учебный магазин</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров – Учебный магазин</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
     <header class="site-header">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">ShopProject</a>
@@ -16,9 +18,9 @@
                     <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
                     <li class="site-nav__item"><a class="site-nav__link site-nav__link--active"
                             href="catalog.html">Каталог</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,39 +34,54 @@
 
         <section class="catalog-layout">
             <aside class="catalog-filters">
-                <h2>Фильтры</h2>
-                <form class="filters-form" action="#" method="get">
-                    <fieldset>
-                        <legend>Категория</legend>
-                        <label><input type="checkbox" name="category" value="all"> Все товары</label>
-                    </fieldset>
-                    <button class="button button--primary" type="submit">Применить</button>
-                </form>
+                <h2>Категории</h2>
+                <ul class="filter-list">
+                    <li><a href="category.html">Электроника</a></li>
+                    <li><a href="#">Одежда</a></li>
+                </ul>
             </aside>
 
             <section class="catalog-products">
-                <h2>Список товаров</h2>
+                <h2>Все товары</h2>
                 <div class="products-grid">
+
                     <article class="product-card">
+                        <img class="product-card__image" src="https://placehold.co/400x300/eef5ff/0057b8?text=Товар+1"
+                            alt="Товар 1">
                         <h3 class="product-card__title">Товар 1</h3>
-                        <p class="product-card__description">Описание.</p>
+                        <p class="product-card__description">Описание первого товара.</p>
                         <p class="product-card__price">1000 руб.</p>
-                        <a class="button button--secondary product-card__button" href="index.html#popular">Подробнее</a>
+                        <a class="button button--secondary product-card__button" href="product.html?id=1">Подробнее</a>
                     </article>
+
                     <article class="product-card">
+                        <img class="product-card__image" src="https://placehold.co/400x300/eef5ff/0057b8?text=Товар+2"
+                            alt="Товар 2">
                         <h3 class="product-card__title">Товар 2</h3>
-                        <p class="product-card__description">Описание.</p>
+                        <p class="product-card__description">Описание второго товара.</p>
                         <p class="product-card__price">1500 руб.</p>
-                        <a class="button button--secondary product-card__button" href="index.html#popular">Подробнее</a>
+                        <a class="button button--secondary product-card__button" href="product.html?id=2">Подробнее</a>
                     </article>
+
+                    <article class="product-card product-card--discount">
+                        <img class="product-card__image" src="https://placehold.co/400x300/eef5ff/0057b8?text=Товар+3"
+                            alt="Товар 3">
+                        <span class="product-card__badge product-card__badge--sale">Скидка</span>
+                        <h3 class="product-card__title">Товар 3</h3>
+                        <p class="product-card__description">Описание третьего товара.</p>
+                        <p class="product-card__price">2000 руб.</p>
+                        <a class="button button--secondary product-card__button" href="product.html?id=3">Подробнее</a>
+                    </article>
+
                 </div>
             </section>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 Учебный проект.</p>
+        <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     </footer>
+
     <a href="#" class="scroll-top" title="Наверх">↑</a>
 </body>
 

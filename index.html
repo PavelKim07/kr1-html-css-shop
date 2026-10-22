@@ -19,9 +19,9 @@
                     <li class="site-nav__item"><a class="site-nav__link site-nav__link--active"
                             href="index.html">Главная</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a>
-                    </li>
                 </ul>
             </nav>
         </div>
@@ -47,40 +47,41 @@
             <h2>Популярные товары</h2>
             <div class="products-grid">
 
-                <!-- Товар 1 - Новинка -->
                 <article class="product-card product-card--featured">
+                    <img class="product-card__image" src="https://placehold.co/400x300/eef5ff/0057b8?text=Товар+1"
+                        alt="Товар 1">
                     <span class="product-card__badge product-card__badge--new">Новинка</span>
                     <h3 class="product-card__title">Товар 1</h3>
                     <p class="product-card__description">Краткое описание учебного товара.</p>
                     <p class="product-card__price">Цена: 1000 руб.</p>
-                    <button class="button button--primary product-card__button" type="button"
-                        data-product="Товар 1">Заказать</button>
+                    <a class="button button--secondary product-card__button" href="product.html?id=1">Подробнее</a>
                 </article>
 
-                <!-- Товар 2 - Хит продаж -->
                 <article class="product-card">
+                    <img class="product-card__image" src="https://placehold.co/400x300/eef5ff/0057b8?text=Товар+2"
+                        alt="Товар 2">
                     <span class="product-card__badge product-card__badge--hit">Хит продаж</span>
                     <h3 class="product-card__title">Товар 2</h3>
                     <p class="product-card__description">Краткое описание учебного товара.</p>
                     <p class="product-card__price">Цена: 1500 руб.</p>
-                    <button class="button button--primary product-card__button" type="button"
-                        data-product="Товар 2">Заказать</button>
+                    <a class="button button--secondary product-card__button" href="product.html?id=2">Подробнее</a>
                 </article>
 
-                <!-- Товар 3 - Скидка -->
                 <article class="product-card product-card--discount">
+                    <img class="product-card__image" src="https://placehold.co/400x300/eef5ff/0057b8?text=Товар+3"
+                        alt="Товар 3">
                     <span class="product-card__badge product-card__badge--sale">Скидка</span>
                     <h3 class="product-card__title">Товар 3</h3>
                     <p class="product-card__description">Краткое описание учебного товара.</p>
                     <p class="product-card__price">Цена: 2000 руб.</p>
-                    <button class="button button--primary product-card__button" type="button"
-                        data-product="Товар 3">Заказать</button>
+                    <a class="button button--secondary product-card__button" href="product.html?id=3">Подробнее</a>
                 </article>
 
             </div>
         </section>
-        <!-- Блок Отзывы -->
+
         <section class="section" id="reviews">
+            <h2>Отзывы наших клиентов</h2>
             <div class="reviews-grid">
                 <blockquote class="review">
                     <p class="review__text">«Отличный учебный магазин! Всё понятно и быстро. Заказал товар, пришел очень
@@ -100,99 +101,32 @@
             </div>
         </section>
 
-        <!-- Блок FAQ -->
         <section class="section" id="faq">
             <h2>Часто задаваемые вопросы</h2>
             <div class="faq-list">
                 <details class="faq-item">
                     <summary class="faq-item__question">Как оформить заказ?</summary>
-                    <p class="faq-item__answer">Нажмите кнопку «Заказать» на карточке товара и заполните форму в
-                        открывшемся окне.</p>
+                    <p class="faq-item__answer">Нажмите кнопку «Подробнее» на карточке товара, а затем на странице
+                        товара нажмите «Оформить заявку».</p>
                 </details>
                 <details class="faq-item">
                     <summary class="faq-item__question">Есть ли доставка?</summary>
-                    <p class="faq-item__answer">Да, мы осуществляем доставку по всей России учебными силами.</p>
+                    <p class="faq-item__answer">Да, мы осуществляем доставку по всей России. Сроки доставки зависят от
+                        вашего региона и составляют от 2 до 7 рабочих дней.</p>
                 </details>
-                <div class="faq-list">
-                    <details class="faq-item">
-                        <summary class="faq-item__question">Как оформить заказ?</summary>
-                        <p class="faq-item__answer">Нажмите кнопку «Заказать» на карточке понравившегося товара.
-                            Откроется модальное окно, где вам нужно будет заполнить форму заявки. После отправки формы с
-                            вами свяжется наш менеджер.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-item__question">Есть ли доставка?</summary>
-                        <p class="faq-item__answer">Да, мы осуществляем доставку по всей России. Сроки доставки зависят
-                            от вашего региона и составляют от 2 до 7 рабочих дней. Стоимость рассчитывается
-                            индивидуально.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-item__question">Можно ли вернуть товар?</summary>
-                        <p class="faq-item__answer">Вы можете вернуть товар надлежащего качества в течение 14 дней с
-                            момента получения, если он не был в использовании и сохранена оригинальная упаковка.</p>
-                    </details>
-                    <details class="faq-item">
-                        <summary class="faq-item__question">Какие способы оплаты вы принимаете?</summary>
-                        <p class="faq-item__answer">Мы принимаем оплату банковскими картами (Visa, MasterCard, МИР), а
-                            также наличными при получении заказа курьеру.</p>
-                    </details>
-                </div>
+                <details class="faq-item">
+                    <summary class="faq-item__question">Можно ли вернуть товар?</summary>
+                    <p class="faq-item__answer">Вы можете вернуть товар надлежащего качества в течение 14 дней с момента
+                        получения, если он не был в использовании.</p>
+                </details>
             </div>
         </section>
-        <aside class="section">
-            <h2>Информация для студентов</h2>
-            <p>На следующих занятиях проект будет расширяться.</p>
-        </aside>
     </main>
 
     <footer class="site-footer" id="contacts">
         <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     </footer>
 
-    <!-- Модальное окно -->
-    <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
-        <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
-        <form class="order-form" id="order-form" action="#" method="post" novalidate>
-            <input id="selected-product" name="selected-product" type="hidden">
-
-            <div class="order-form__field">
-                <label class="order-form__label" for="order-name">Имя</label>
-                <input class="order-form__input" id="order-name" name="name" type="text" required>
-            </div>
-            <div class="order-form__field">
-                <label class="order-form__label" for="order-email">E-mail</label>
-                <input class="order-form__input" id="order-email" name="email" type="email" required>
-            </div>
-            <div class="order-form__field">
-                <label class="order-form__label" for="order-phone">Телефон</label>
-                <input class="order-form__input" id="order-phone" name="phone" type="tel"
-                    pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required>
-            </div>
-            <div class="order-form__field">
-                <label class="order-form__label" for="order-topic">Тема</label>
-                <select class="order-form__select" id="order-topic" name="topic" required>
-                    <option value="">Выберите тему</option>
-                    <option value="product">Заказ товара</option>
-                </select>
-            </div>
-            <div class="order-form__field">
-                <label class="order-form__label" for="order-comment">Комментарий</label>
-                <textarea class="order-form__textarea" id="order-comment" name="comment" rows="3"></textarea>
-            </div>
-            <div class="order-form__field">
-                <label>
-                    <input id="order-agreement" name="agreement" type="checkbox" required> Я согласен на обработку
-                    данных
-                </label>
-            </div>
-            <div class="order-form__actions">
-                <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
-                <button class="button button--primary" type="submit">Отправить</button>
-            </div>
-        </form>
-    </dialog>
-
-    <p class="success-message" id="success-message" hidden>Форма успешно отправлена!</p>
     <a href="#" class="scroll-top" title="Наверх">↑</a>
 </body>
 

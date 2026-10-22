@@ -17,7 +17,8 @@
                 <ul class="site-nav__list">
                     <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-                    <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link site-nav__link--active"
+                            href="product.html">Товар</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
                     <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
                 </ul>
@@ -35,24 +36,19 @@
         <section class="section">
             <div class="product-page">
 
-                <!-- Левая колонка: фото и кнопка -->
                 <div class="product-page__media">
-                    <div class="product-page__image-placeholder">
-                        <span>Фото товара (заглушка)</span>
-                    </div>
+                    <img class="product-page__image" id="product-image"
+                        src="https://placehold.co/600x400/eef5ff/0057b8?text=Товар+1" alt="Фото товара">
                     <a class="button button--primary product-page__button" href="order.html">Оформить заявку</a>
                 </div>
 
-                <!-- Правая колонка: инфо и таблица -->
                 <div class="product-page__info">
-                    <h1>Товар 1 (Учебный)</h1>
-                    <p class="product-card__price product-page__price">Цена: 1000 руб.</p>
+                    <h1 id="product-title">Товар 1 (Учебный)</h1>
+                    <p class="product-card__price product-page__price" id="product-price">Цена: 1000 руб.</p>
 
                     <h2>Описание</h2>
-                    <p class="product-page__description">
-                        Это подробное описание учебного товара. Он обладает отличными характеристиками,
-                        идеально подходит для демонстрации возможностей HTML и CSS.
-                        В будущем здесь появится больше деталей и отзывов.
+                    <p class="product-page__description" id="product-desc">
+                        Это подробное описание учебного товара.
                     </p>
 
                     <h2>Характеристики</h2>
@@ -66,11 +62,11 @@
                         <tbody>
                             <tr>
                                 <td>Категория</td>
-                                <td>Учебный товар</td>
+                                <td id="product-category">Учебный товар</td>
                             </tr>
                             <tr>
                                 <td>Цена</td>
-                                <td>1000 руб.</td>
+                                <td id="product-table-price">1000 руб.</td>
                             </tr>
                             <tr>
                                 <td>Наличие</td>
@@ -87,9 +83,7 @@
         <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     </footer>
 
-    <!-- Кнопка Наверх -->
     <a href="#" class="scroll-top" title="Наверх">↑</a>
-
 </body>
 
 </html>
