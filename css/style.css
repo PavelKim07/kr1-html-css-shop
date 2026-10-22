@@ -84,7 +84,7 @@ body {
 /* ===================================
    4. Шапка и навигация
    =================================== */
-.site-header .site-header {
+.site-header {
     background-color: var(--color-surface);
     position: sticky;
     /* Меню прилипает при скролле */
