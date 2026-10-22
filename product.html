@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка товара – Учебный магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="site-header__logo" href="index.html">ShopProject</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+                    <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <nav class="breadcrumbs" aria-label="Хлебные крошки">
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
+            <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+            <span class="breadcrumbs__current">Товар</span>
+        </nav>
+
+        <section class="section">
+            <div class="product-page">
+                <div class="product-page__info">
+                    <h1>Товар 1</h1>
+                    <p class="product-card__price">Цена: 1000 руб.</p>
+                    <a class="button button--primary" href="order.html">Оформить заявку</a>
+                </div>
+
+                <div class="product-page__details">
+                    <h2>Характеристики</h2>
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>Параметр</th>
+                                <th>Значение</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Категория</td>
+                                <td>Учебный товар</td>
+                            </tr>
+                            <tr>
+                                <td>Цена</td>
+                                <td>1000 руб.</td>
+                            </tr>
+                            <tr>
+                                <td>Наличие</td>
+                                <td>В наличии</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    </footer>
+
+</body>
+
+</html>
