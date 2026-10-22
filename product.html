@@ -34,13 +34,27 @@
 
         <section class="section">
             <div class="product-page">
-                <div class="product-page__info">
-                    <h1>Товар 1</h1>
-                    <p class="product-card__price">Цена: 1000 руб.</p>
-                    <a class="button button--primary" href="order.html">Оформить заявку</a>
+
+                <!-- Левая колонка: фото и кнопка -->
+                <div class="product-page__media">
+                    <div class="product-page__image-placeholder">
+                        <span>Фото товара (заглушка)</span>
+                    </div>
+                    <a class="button button--primary product-page__button" href="order.html">Оформить заявку</a>
                 </div>
 
-                <div class="product-page__details">
+                <!-- Правая колонка: инфо и таблица -->
+                <div class="product-page__info">
+                    <h1>Товар 1 (Учебный)</h1>
+                    <p class="product-card__price product-page__price">Цена: 1000 руб.</p>
+
+                    <h2>Описание</h2>
+                    <p class="product-page__description">
+                        Это подробное описание учебного товара. Он обладает отличными характеристиками,
+                        идеально подходит для демонстрации возможностей HTML и CSS.
+                        В будущем здесь появится больше деталей и отзывов.
+                    </p>
+
                     <h2>Характеристики</h2>
                     <table class="product-table">
                         <thead>
@@ -72,6 +86,9 @@
     <footer class="site-footer">
         <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     </footer>
+
+    <!-- Кнопка Наверх -->
+    <a href="#" class="scroll-top" title="Наверх">↑</a>
 
 </body>
 
