@@ -542,3 +542,20 @@ html {
     background-color: var(--color-danger);
     /* Красный */
 }
+
+/* ===================================
+   11. Картинки товаров
+   =================================== */
+.product-card__image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-xs);
+}
+
+.product-page__image {
+    width: 100%;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+}
