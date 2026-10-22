@@ -84,8 +84,13 @@ body {
 /* ===================================
    4. Шапка и навигация
    =================================== */
-.site-header {
+.site-header .site-header {
     background-color: var(--color-surface);
+    position: sticky;
+    /* Меню прилипает при скролле */
+    top: 0;
+    z-index: 50;
+    /* Чтобы меню было поверх контента */
 }
 
 .site-header__inner {
@@ -520,4 +525,20 @@ html {
 
 .scroll-top:hover {
     background-color: var(--color-primary-dark);
+}
+
+/* Модификаторы для бейджей */
+.product-card__badge--new {
+    background-color: var(--color-success);
+    /* Зеленый */
+}
+
+.product-card__badge--hit {
+    background-color: #ff9800;
+    /* Оранжевый */
+}
+
+.product-card__badge--sale {
+    background-color: var(--color-danger);
+    /* Красный */
 }
